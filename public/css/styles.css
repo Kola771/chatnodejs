@@ -1,0 +1,62 @@
+.divElement {    
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 2px;
+    align-items: center;
+    gap: 0 .5em;
+}
+
+#messageSection
+{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.divElement>div>p:nth-of-type(1) {
+    text-align: right;
+}
+
+.divElement>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    order: 2;
+}
+
+.divElementTwo>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.divElementTwo {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 2px;
+    align-items: center;
+    gap: 0 .5em;
+}
+
+.sent {
+    background-color: #f50;
+    padding: 5px 12px;
+    max-width: 200px;
+    border-top-left-radius: .8em;
+    border-bottom-left-radius: .8em;
+    border-bottom-right-radius: .8em;
+    font-size: 13px;
+    text-transform: justify;
+}
+
+.received {
+    background-color: rgb(23, 161, 199);
+    padding: 5px 12px;
+    max-width: 200px;
+    border-top-right-radius: .8em;
+    border-bottom-right-radius: .8em;
+    border-bottom-left-radius: .8em;
+    font-size: 13px;
+    text-transform: justify;
+}

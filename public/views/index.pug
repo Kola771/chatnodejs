@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title H5book
+        
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+        link(rel="stylesheet", href="/css/styles.css")
+
+    body.m-0
+        header.flex.items-center.justify-between.px-4.py-2.bg-gray-800.text-white.cursor-pointer.py-3.sticky.top-0.z-50
+            h1.title H5book Chat
+            div
+            svg.w-4.h-4.text-gray-800 (aria-hidden="true", xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 20 20")
+                            path(stroke="white", stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z")
+        main.flex 
+            div(style="border-bottom: 1px; width: 15%; height: 99vh").border-gray-400.py-1.shadow.h-full
+                div.flex.flex-col.gap-y-2
+                    div.flex.flex-col.gap-2 
+                        h2.px-4.uppercase.text-gray-400.font-bold Channels
+                        div.flex.px-4.py-1.font-bold.text-gray-700.gap-1 Général
+                        div.flex.px-4.py-1.font-bold.text-gray-700.gap-1 Gaming
+                        div.flex.px-4.py-1.font-bold.text-gray-700.gap-1 Random
+            section(style="width: 85%; margin: 5px auto 0;").relative
+                div
+                    div.px-3.py-2.shadow-lg.text-gray-600(style="border-bottom: 1px solid gray") Communauté
+                    div.relative(style="width: 60%; margin: 10px auto 0; height: 85vh")
+                        div.flex.flex-col.absolute.bottom-0.right-0.left-0 
+                            form.flex.justify-between.w-full.px-2.py-1(id="messageForm")
+                                textarea(name="", cols="10", rows="1", placeholder="Tapez votre message ici...", style="max-height: 200px; overflow-y: auto; font-size: 14px; border: 1px solid gray; outline: none")#messageInput.px-3.py-2.rounded-full.w-full.resize-none
+
+                        div#messageSection.flex.flex-col
+                            div#typingNotification(style="font-size: 13px") 
+
+        <script src="/socket.io/socket.io.js"></script>
+        script(src="/scripts/client.js")
